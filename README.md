@@ -49,3 +49,10 @@ Feature Tasks:
 User will have an easy to remember domain name that is the same every time the user returns.
 Acceptance Test:
 User is able to view the website using a domain name that is easy to remember.
+
+## Project Memebers:
+- Nicholas Cerillo 
+- Sullvian Barysevich
+- Jason Taisey
+- Yuliya Barysevich
+
