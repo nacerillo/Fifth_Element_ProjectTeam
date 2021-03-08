@@ -9,7 +9,7 @@ This is the start of our groups 301 Final Project.
 
 **Story #1:**
 
-As a user, I want to know view information about living in a particular city, so I can make a more informed decision about moving there.
+As a user, I want to view information about living in a particular city, so I can make a more informed decision about moving there.
 
 **Feature Tasks:**
 
