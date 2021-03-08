@@ -32,7 +32,11 @@ function addCity(req, res) {
   // redirect to favorites page
 }
 
-function deletCity(res, req) {
+function getCity(req, res) {
+  //gets results of a searched city.
+  // renders details of searched city
+}
+function deleteCity(res, req) {
   //delete city from favorites
   // direct to favorites page
 }
