@@ -83,10 +83,10 @@ ________________________________________________________________________________
 ![SQL](Resources/DatabaseModelDiagram.png)
 ![SQL_2](Resources/sql.png)
 
-## Project Memebers:
+## Project Members:
 
 - Nicholas Cerillo 
-- Sullvian Barysevich
+- Victor Sullvian 
 - Jason Taisey
 - Yuliya Barysevich
 
