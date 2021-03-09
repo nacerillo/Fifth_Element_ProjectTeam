@@ -22,7 +22,7 @@ As a user, I want to view information about living in a particular city, so I ca
 ____________________________________________________________________________________
 
 **Story #2:**
-Victor is a user wants to get out of his current house because of the pandemic, Victor will use our website to search out what locations have the highest happiness index. This will help the user pick the right location to move.
+As a user, I want to want to find a location with the highest happiness index, so that I can make a decision about whether to go there, or not.
 
 **Feature Tasks:**
 
@@ -36,7 +36,7 @@ Victor is a user wants to get out of his current house because of the pandemic, 
 ____________________________________________________________________________________
 
 **Story #3:**
-As a user I want to be able to go back to the website where I found the city information and I want to recall past searches. This would let me make a decision on where I want to live easier so I don’t have to redo a search every time
+As a user I want to be able to go back to the website where I found the city information and I want to recall past searches. This would let me make a decision on where I want to live easier so I don’t have to redo a search every time.
 
 **Feature Tasks:**
 
@@ -49,11 +49,12 @@ As a user I want to be able to go back to the website where I found the city inf
 ____________________________________________________________________________________
 
 **Story #4:**
-As a user I’ve come to realize that I want to improve my mental health and have decided to look for a new place to live. So I look at the website the our group has created and it provides me with the happiness index for different city locations. The great part is that I have discovered that I can look at images of the cities and what the transportation is like within that city. 
+As a user, I want to be able to pull up transportation info about a specific city, so that I will know the best way to get around in that city.
 
 **Feature Tasks:**
 
 - User will be able to save searches and have them displayed on a ‘saved searches’ page.
+- be able to access transportation data over the API
 
 **Acceptance Test:**
 
@@ -63,7 +64,7 @@ ________________________________________________________________________________
 
 
 **Story #5:**
-As a user I want to get a website and find out about the people who created the page, I can scalp data about this website and use it do create my own database with the results.
+As a user, I want to be able to save or favorite a city that I have found, so that i can look at it again without having to perform another search. 
 
 **Feature Tasks:**
 
