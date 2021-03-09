@@ -10,7 +10,32 @@
     
     <div>
         <h2><%= newCity.name %> </h2>
-         <%= newCity.description%>
+        <img src=<%= newCity.image_url %> >
+        <p><%= newCity.description %></p>
+        <ul>
+            <li>Housing: <%= newCity.housing %> /10 </li>
+            <li>Cost of Living: <%= newCity.cost_of_living %>/10</li>
+            <li>Startups: <%= newCity.startup %> /10</li>
+            <li>Venture Capital: <%= newCity.venture_capital %> /10</li>
+            <li>Travel Connectivity: <%= newCity.travel_connect %> /10</li>
+            <li>Commute: <%= newCity.commute %> /10</li>
+            <li>Buisness Freedom: <%= newCity.buisness %> /10</li>
+            <li>Safety: <%= newCity.safety %> /10</li>
+            <li>Healthcare: <%= newCity.healthcare %> /10</li>
+            <li>Education: <%= newCity.education %> /10</li>
+            <li>Environmental Quality: <%= newCity.enviroment %> /10</li>
+            <li>Economy: <%= newCity.economy %> /10</li>
+            <li>Taxation: <%= newCity.taxation %></li>
+            <li>Internet Access: <%= newCity.internet_access %> /10</li>
+            <li>Leisure & Culture: <%= newCity.culture %> /10</li>
+            <li>Tolerance: <%= newCity.tolerance %> /10</li>
+            <li>Outdoors: <%= newCity.outdoors %> /10</li>
+        </ul>
+        <p>Total Score: <%= newCity.generalScore %> /100</p>
+        <!-- <p> <%= newCity.description%></p>
+        <p> <%= newCity.housing%></p>
+        <p><%= newCity.cost_of_living%></p> -->
+        
     </div>
 </body>
 </html>
