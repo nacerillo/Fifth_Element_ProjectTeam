@@ -1,7 +1,7 @@
 body {
   width: 100%;
   margin: 0 auto;
-  background-color: rgb(175,  241,  237);
+  background-color: F9FBF2;
 }
 
 header {
@@ -11,6 +11,7 @@ header {
   background-image: url("/img/header5.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-color: F9FBF2;
 }
 .logo {
   height: 120px;
@@ -44,7 +45,7 @@ li {
   padding: 10px;
 }
 .navigation {
-  text-decoration: none;
+  font-family: 'Baloo 2', cursive;
 }
 
 main {
@@ -58,6 +59,7 @@ h1 {
   font-family: sans-serif;
   font-size: xx-large;
   padding: 30px;
+  font-family: 'Fira Sans', sans-serif;
 }
 img {
   border-radius: 5px;
@@ -65,11 +67,11 @@ img {
 h2 {
   padding: 10px;
   font-size: 34px;
-  font-family: cursive;
+  font-family: 'Baloo 2', cursive;
 }
 p {
   padding: 10px;
-  font-family: sans-serif;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 .center {
