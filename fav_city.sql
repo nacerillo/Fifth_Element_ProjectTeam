@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS city_data;
+DROP TABLE IF EXISTS city_fav_data;
 
-CREATE TABLE city_data(
+CREATE TABLE city_fav_data(
 id SERIAL PRIMARY KEY, 
 name VARCHAR(255),
 description TEXT,

@@ -6,13 +6,11 @@
   margin: auto;
   
 }
-
 .city-search {
   border: 5px solid black;
   
   
 }
-
 .form-potato {
   align-content: center;
   justify-content: center;
@@ -21,7 +19,6 @@
   margin-top: 15px;
   
 }
-
 .top-rated {
   display: grid;
   height: 450px;
