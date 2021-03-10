@@ -1,133 +1,104 @@
 <!DOCTYPE html>
 <html>
-  <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Some Website</title>
+  <head>
+    <link rel="stylesheet" href="/public/styles/reset.css" /> 
+    <link rel="stylesheet" href="/public/styles/base.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/3d57454b78.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/public/styles/reset.css" />
-    <link rel="stylesheet" href="/public/styles/base.css" /> 
-    <head> 
-    </head>
+    <title>About Us</title>
+  </head>
   <body>
-    <header>    
+    <header>
       <div>
-      <img class="logo" src="/img/nurse logo.png" alt="" />   
-      </div>
-      <div>    
-        <nav>    
-          <ul> 
-            <li><a class="navigation" href="/HTML/index.html">Home</a></li>
-            <!-- NEED TO UPDATE LINK -->
-            <li> <a class="navigation" href="/HTML/registration.html">Searches</a>
-              <!-- NEED TO UPDATE LINK --></li>
-            <li>
-              <a class="navigation" href="/HTML/admin.html">Favorite Locations</a>
-            </li>
-            <!-- NEED TO UPDATE LINK -->
-            <li>
-              <a class="navigation" href="/HTML/about_us.html">About Us</a>
-            </li>
-            <!-- NEED TO UPDATE LINK -->
-          </ul> 
+        <nav>
+          <ul>
+            <li><a class="navigation" href="index.html">Home</a></li>
+            <li><a class="navigation" href="registration.html">Registration</a></li>
+            <li><a class="navigation" href="admin.html">Administration</a></li>
+            <li><a class="navigation" href="about_us.html">About Us</a></li>
+          </ul>
         </nav>
       </div>
     </header>
     <main>
-      <div> 
-        <h1>Hover or click each image to learn more about the authors</h1>   
+      <div>
+        <h1>Hover or click each image to learn more about the authors</h1>
       </div>
-      <div class="center">    
+      <div class="center">
         <div class="card-container">
           <div class="card">
-            <div class="side">
-              <img src="/Assets/Yuliya.jpg" alt="Yuliya" class="about-us" />
+            <div class="side"><img src="Assets/Yuliya.jpg" alt="Yuliya" class="about-us"/></div>
+              <div class="side back">
+                <div>
+                  <h2>About Yuliya</h2>
+                  <p>I spent 8 years in the U.S Army followed by 5 years as a Deputy Sheriff. I have also taught High School, driven for Uber, delivered packages for Amazon, owned bars and restaurants and even worked for IBEW Local 46. I love to learn and have a passion for technology and helping others. I am currently a full-time student and aspiring software developer</p>
+                </div>
+                <div class="connect">
+                  <a href="https://www.linkedin.com/in/yuliya-barysevich/" target="_blank"><img src="/Assets/LI-round.png" alt="LinkedIn icon" class="authors-social"/></a>
+                  <a href="https://github.com/YuliyaBarysevich" target="_blank"><img src="/Assets/GH-round.png" alt="GitHub icon" class="authors-social"/></a>
+                </div>
+              </div>
             </div>
-            <div class="side back">  
-              <div>
-                <h2>About Yuliya</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p> 
-              </div>
-              <div class="connect">
-                <a href="https://www.linkedin.com/in/yuliya-barysevich/" target="_blank" class="authors-social"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/YuliyaBarysevich" target="_blank" class="authors-social"/><i class="fab fa-github"></i></a>
-              </div>
-            </div>    
-          </div>  
-        </div>
-        <div class="card-container">    
-          <div class="card">
-            <div class="side">
-              <img src="/Assets/Nicholas.png" alt="Nicholas" class="about-us" />
-            </div>
-            <div class="side back">
-              <div>
-                <h2>About Nicholas</h2>   
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </div>   
-              <div class="connect">
-                <a href="https://www.linkedin.com/in/nicholas-cerillo-511321101" target="_blank" class="authors-social"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/nacerillo" target="_blank" target="_blank" class="authors-social"/><i class="fab fa-github"></i></a>
-              </div>
-            </div>  
           </div>
-        </div>    
-      </div>
-      <div class="center">    
         <div class="card-container">
           <div class="card">
-            <div class="side">
-              <img src="/Assets/Victor.jpg" alt="Victor" class="about-us" />
-            </div>
+            <div class="side"><img src="/Assets/Nicholas.png" alt="Nicholas" class="about-us"/></div>
             <div class="side back">
               <div>
-                <h2>About Victor</h2>   
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </div>   
-              <div class="connect">
-                <a href="https://www.linkedin.com/in/victor-sullivan79/" target="_blank" class="authors-social"><i class="fab fa-linkedin"></a>
-                  <a href="https://github.com/VictorSully79" target="_blank" target="_blank" class="authors-social"/><i class="fab fa-github"></i></a>
-              </div>
-            </div>  
-          </div>
-        </div>
-        <div class="card-container"> 
-          <div class="card">  
-            <div class="side">
-              <img src="/Assets/Jason.jpg" alt="Jason" class="about-us" />
-            </div>  
-            <div class="side back">
-    <div>
-   <h2>About Jason</h2>
-   <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
+                <h2>About Nicholas</h2>
+                <p>I spent 8 years in the U.S Army followed by 5 years as a Deputy Sheriff. I have also taught High School, driven for Uber, delivered packages for Amazon, owned bars and restaurants and even worked for IBEW Local 46. I love to learn and have a passion for technology and helping others. I am currently a full-time student and aspiring software developer</p>
               </div>
               <div class="connect">
-   <a href="https://www.linkedin.com/in/jason-taisey-4b229452/" target="_blank" class="authors-social"><i class="fab fa-linkedin"></a>
-   <a href="https://github.com/JTaisey389" target="_blank" target="_blank" class="authors-social"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/nicholas-cerillo-511321101" target="_blank"><img src="/Assets/LI-round.png" alt="LinkedIn icon" class="authors-social"/></a>
+                <a href="https://github.com/nacerillo" target="_blank"><img src="/Assets/GH-round.png" alt="GitHub icon" class="authors-social"/></a>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="center">
+        <div class="card-container">
+          <div class="card">
+            <div class="side"><img src="Assets/Victor.jpg" alt="Victor" class="about-us"/></div>
+            <div class="side back">
+              <div>
+                <h2>About Victor</h2>
+                <p>I spent 8 years in the U.S Army followed by 5 years as a Deputy Sheriff. I have also taught High School, driven for Uber, delivered packages for Amazon, owned bars and restaurants and even worked for IBEW Local 46. I love to learn and have a passion for technology and helping others. I am currently a full-time student and aspiring software developer.</p>
+              </div>
+              <div class="connect">
+                <a href="https://www.linkedin.com/in/victor-sullivan79/" target="_blank"><img src="/Assets/LI-round.png" alt="LinkedIn icon" class="authors-social"/></a>
+                <a href="https://github.com/VictorSully79" target="_blank"><img src="/Assets/GH-round.png" alt="GitHub icon" class="authors-social"/></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card">
+            <div class="side"><img src="/Assets/Jason.jpg" alt="Jason" class="about-us"/></div>
+            <div class="side back">
+              <div>
+                <h2>About Jason</h2>
+                <p>Hi Everyone! I am a former Project Manager with a problem-solving mentality. I am an avid plant enthusiast with a collection of well over thirty different varieties of plants. I also enjoy front-end web development and having the ability to see live data being generated.</p>
+              </div>
+              <div class="connect">
+                <a href="https://www.linkedin.com/in/jason-taisey-4b229452/" target="_blank"><img src="/Assets/LI-round.png" alt="LinkedIn icon" class="authors-social"/></a>
+                <a href="https://github.com/JTaisey389" target="_blank"><img src="/Assets/GH-round.png" alt="GitHub icon" class="authors-social"/></a>
+              </div>
+            </div>
+          </div>
+        </div> 
       </div>
     </main>
-    <footer> 
+    <footer>
       <div>
-        <a href="facebook placeholder"><img src="/img/FB.png" alt="facebook icon" class="social"/></a>
-        <a href="instagram placeholder"><img src="/img/IG.png" alt="instagram icon" class="social"/></a>
-        <a href="twitter placeholder"><img src="/img/TW.png" alt="twitter icon" class="social"/></a>
-        <a href="LinkedIn placeholder"><img src="/img/LI.png" alt="LinkedIn icon" class="social"/></a>
+        <img src="/Assets/FB.png" link="https://www.facebook.com/" class="footer-social">
+        <!-- <a href="https://www.facebook.com/" src="/Assets/FB.png" class="footer-social"></a> -->
+        <img src="/Assets/GH-round.png" class="footer-social">
+        <img src="/Assets/IG.png" class="footer-social">
+        <img src="/Assets/LI-round.png" class="footer-social">
       </div>
-    </footer>        
+    </footer> 
   </body>
 </html>
