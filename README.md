@@ -9,7 +9,7 @@ This is the start of our groups 301 Final Project.
 
 **Story #1:**
 
-As a user, I want to view information about living in a particular city, so I can make a more informed decision about moving there.
+As a user, I want to view information about living in a particular city, so that I can make a more informed decision about moving there.
 
 **Feature Tasks:**
 
@@ -36,7 +36,7 @@ As a user, I want to want to find a location with the highest happiness index, s
 ____________________________________________________________________________________
 
 **Story #3:**
-As a user I want to be able to go back to the website where I found the city information and I want to recall past searches. This would let me make a decision on where I want to live easier so I don’t have to redo a search every time.
+As a user I want to be able to go back to the website where I found the city information and recall past searches so that I don’t have to redo a search every time.
 
 **Feature Tasks:**
 
@@ -64,7 +64,7 @@ ________________________________________________________________________________
 
 
 **Story #5:**
-As a user, I want to be able to save or favorite a city that I have found, so that i can look at it again without having to perform another search. 
+As a user I want a website with a easy to remember name so that I can return with ease.  
 
 **Feature Tasks:**
 
