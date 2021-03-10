@@ -1,3 +1,4 @@
+/* ABOUT US */
 body {
   width: 100%;
   margin: 0 auto;
@@ -12,15 +13,6 @@ header {
   background-repeat: no-repeat;
   background-position: center;
 }
-.logo {
-  height: 120px;
-  width: auto;
-  padding: 25px;
-  opacity: .9;
-  top: 10px;
-  left: 50px;
-  transform: rotate(-25deg);
-} 
 
 nav {
   display: flex;
@@ -134,4 +126,41 @@ footer {
 .footer-social {
   height: 40px;
   width: auto;
+}
+
+/* JOB SEARCH CSS */
+
+.hero-image {
+  width: 950px;
+  height: 450px;
+  display: block;
+  justify-content: center;
+  margin: auto;
+}
+.show-city{
+  text-align: center;
+  padding: 20px;
+  height: 50px;
+}
+.hero-grid {
+  height: 550px;
+}
+.job-description1,.job-description2, .job-description3, .job-description4, .job-description5{
+  height: 300px;
+  margin: 10px;
+  padding: 10px;
+  border-color: black;
+  border-style: solid;
+  border-width: medium;
+  border-radius: 10px;
+  overflow: scroll;
+}
+.job-grid {
+  display: grid;
+  height: 500px;
+  width: 97%;
+  margin: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: space-around;
+  text-align: center;
 }
