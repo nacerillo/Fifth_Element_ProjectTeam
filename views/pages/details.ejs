@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Document</title>
 </head>
 <body>
@@ -32,11 +32,37 @@
             <li>Outdoors: <%= newCity.outdoors %> /10</li>
         </ul>
         <p>Total Score: <%= newCity.generalScore %> /100</p>
+
+        <form action='/favorites' method='POST'>
+            <input type='hidden' name='name' value = '<%= newCity.name %>'>
+            <input type='hidden' name='image_url' value = '<%= newCity.image_url %>'>
+            <input type='hidden' name='description' value = '<%= newCity.description %>'>
+            <input type='hidden' name='housing' value = '<%= newCity.housing %>'>
+            <input type='hidden' name='cost_of_living' value = '<%= newCity.cost_of_living %>'>
+            <input type='hidden' name='startup' value = '<%= newCity.startup %>'>
+            <input type='hidden' name='venture_capital' value = '<%= newCity.venture_capital %>'>
+            <input type='hidden' name='travel_connect' value = '<%= newCity.travel_connect %>'>
+            <input type='hidden' name='commute' value = '<%= newCity.commute %>'>
+            <input type='hidden' name='buisness' value = '<%= newCity.buisness %>'>
+            <input type='hidden' name='safety' value = '<%= newCity.safety %>'>
+            <input type='hidden' name='healthcare' value = '<%= newCity.healthcare %>'>
+            <input type='hidden' name='education' value = '<%= newCity.education %>'>
+            <input type='hidden' name='enviroment' value = '<%= newCity.enviroment %>'>
+            <input type='hidden' name='economy' value = '<%= newCity.economy %>'>
+            <input type='hidden' name='taxation' value = '<%= newCity.taxation %>'>
+            <input type='hidden' name='internet_access' value = '<%= newCity.internet_access %>'>
+            <input type='hidden' name='culture' value = '<%= newCity.culture %>'>
+            <input type='hidden' name='tolerance' value = '<%= newCity.tolerance %>'>
+            <input type='hidden' name='outdoors' value = '<%= newCity.outdoors %>'>
+            <input type='hidden' name='generalScore' value = '<%= newCity.generalScore%> '>
+            <button type='submit' id='save-city'>Add to my Favs</button>
+          </form>
+          
         
-        <form action="/search/job" method="POST">
-            <input type ='hidden' name='city_name' value="<%= newCity.name %>">
-            <input type="text" name="job_query">
-             <input type="submit">
+        <form action='/search/job' method='POST'>
+            <input type ='hidden' name='city_name' value='<%= newCity.name %>'>
+            <input type='text' name='job_query'>
+             <input type='submit'>
       </form>
   
         

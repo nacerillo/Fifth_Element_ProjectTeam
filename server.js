@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3003;
 const JOB_API = process.env.JOB_API;
 const JOB_ID = process.env.JOB_ID;
 
-//client.on("error", (error) => console.log(error));
+client.on('error', (error) => console.log(error));
 
 app.use(methodOverride('_method'));
 app.set('view engine', 'ejs');
@@ -19,37 +19,29 @@ app.use(express.static('./public'));
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', renderHomepage);
-//app.post("/cities", addCity);
 app.post('/search/result', getCity);
-app.post('/search/job', getJob)
-// app.delete("/cities/:id", deleteCity);
+app.post('/search/job', getJob);
+app.get('/favorites', renderFavPage);
+app.post('/favorites', addToFavorites);
+
 
 function renderHomepage(req, res) {
   res.render('pages/index.ejs');
 }
 
-function addCity(req, res) {
-  // add city to favorites
-  // redirect to favorites page
-}
-
 function getCity(req, res) {
-  console.log('hello');
   const cityname = req.body.city_name.replace(/\s+/g, '-').toLowerCase();
   const checkData = `SELECT * FROM city_data WHERE name = $1`;
   const checkArray = [cityname];
-  console.log(cityname, 'city-name');
+  // console.log(cityname, 'city-name');
   client.query(checkData, checkArray).then((returnedData) => {
-    console.log('inside query');
     if (returnedData.rowCount === 0) {
-      console.log('inside IF statement');
       let newCity = new City(null, cityname);
       const url_1 = `https://api.teleport.org/api/urban_areas/slug:${cityname}/scores`;
       const url_2 = `https://api.teleport.org/api/urban_areas/slug:${cityname}/images`;
       const agentArray = [superagent.get(url_1), superagent.get(url_2)];
       Promise.all(agentArray)
         .then((responseArray) => {
-          console.log('this is reaching');
           const cityResults = responseArray[0];
           const imageResult = responseArray[1];
           newCity.description = cityResults.body.summary.replace(/<[^>]*>/g,'');
@@ -73,13 +65,12 @@ function getCity(req, res) {
           newCity.generalScore = cityResults.body.teleport_city_score.toFixed(2);
           newCity.image_url = imageResult.body.photos[0].image.mobile;
 
-          //console.log(newCity, "able to make city");
 
-          const addData = `INSERT INTO city_data (name,summary,housing,cost_of_living,startup,venture_capital,travel_connect, 
-            commute, buisness,safety,healthcare,education,enviroment,economy,taxation,internet_access,culture,tolerance,outdoors,generalScore,image_url ) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21)`;
+          const addData = `INSERT INTO city_data (name,description,housing,cost_of_living,startup,venture_capital,travel_connect, 
+            commute, buisness,safety,healthcare,education,enviroment,economy,taxation,internet_access,culture,tolerance,outdoors,generalScore,image_url) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21)`;
           const addArray = [
             newCity.name,
-            newCity.summary,
+            newCity.description,
             newCity.housing,
             newCity.cost_of_living,
             newCity.startup,
@@ -113,11 +104,10 @@ function getCity(req, res) {
           res.status(500).send(`Sorry something went wrong`);
         });
     } else {
-      console.log(returnedData.rows[0], 'Alreadt Exists');
+      console.log('Already Exists');
       res.render('pages/details.ejs', { newCity: returnedData.rows[0] });
     }
   });
-  //console.log(req.body);
 }
 
 function getJob(req, res){
@@ -128,6 +118,56 @@ function getJob(req, res){
     .then(result => {
       const output = result.body.results.map(job => new Job(job))
       res.render('pages/job', {output})
+    })
+    .catch((error) => {
+      console.log(error);
+      res.status(500).send(`Sorry something went wrong`);
+    });
+}
+
+function renderFavPage(req, res){
+  const sqlString = 'SELECT * FROM city_fav_data;';
+  client.query(sqlString)
+    .then(result => {
+      const ejsObject = {allCities: result.rows};
+      res.render('pages/favorites.ejs', ejsObject);
+    })
+    .catch((error) => {
+      console.log(error);
+      res.status(500).send(`Sorry something went wrong`);
+    });
+}
+
+function addToFavorites(req, res){
+  const sqlString = `INSERT INTO city_fav_data (name,description,housing,cost_of_living,startup,venture_capital,travel_connect, 
+    commute, buisness, safety, healthcare, education, enviroment, economy, taxation, internet_access, culture, tolerance, outdoors,generalScore, image_url) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21) RETURNING id;`;
+  const sqlArray = [
+    req.body.name,
+    req.body.description,
+    req.body.housing,
+    req.body.cost_of_living,
+    req.body.startup,
+    req.body.venture_capital,
+    req.body.travel_connect,
+    req.body.commute,
+    req.body.buisness,
+    req.body.safety,
+    req.body.healthcare,
+    req.body.education,
+    req.body.enviroment,
+    req.body.economy,
+    req.body.taxation,
+    req.body.internet_access,
+    req.body.culture,
+    req.body.tolerance,
+    req.body.outdoors,
+    req.body.generalScore,
+    req.body.image_url];
+    // console.log(sqlArray)
+  client.query(sqlString, sqlArray)
+    .then(() => {
+      console.log('added to DB');
+      res.redirect(`/favorites`);
     })
     .catch((error) => {
       console.log(error);
