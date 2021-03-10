@@ -117,13 +117,13 @@ function getCity(req, res) {
           newCity.outdoors = cityResults.body.categories[16].score_out_of_10.toFixed(
             2
           );
-          newCity.generalScore = cityResults.body.teleport_city_score.toFixed(
+          newCity.general_score = cityResults.body.teleport_city_score.toFixed(
             2
           );
           newCity.image_url = imageResult.body.photos[0].image.mobile;
 
           const addData = `INSERT INTO city_data (name,description,housing,cost_of_living,startup,venture_capital,travel_connect, 
-            commute, buisness,safety,healthcare,education,enviroment,economy,taxation,internet_access,culture,tolerance,outdoors,generalScore,image_url) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21)`;
+            commute, buisness,safety,healthcare,education,enviroment,economy,taxation,internet_access,culture,tolerance,outdoors,general_score,image_url) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21)`;
           const addArray = [
             newCity.name,
             newCity.description,
@@ -144,9 +144,10 @@ function getCity(req, res) {
             newCity.culture,
             newCity.tolerance,
             newCity.outdoors,
-            newCity.generalScore,
+            newCity.general_score,
             newCity.image_url,
           ];
+          console.log(addArray);
           client.query(addData, addArray).catch((error) => {
             console.log(error);
             res
@@ -160,7 +161,7 @@ function getCity(req, res) {
           res.status(500).send(`Sorry something went wrong`);
         });
     } else {
-      console.log("Already Exists");
+      console.log("Already Exists", returnedData.rows[0]);
       res.render("pages/details.ejs", { newCity: returnedData.rows[0] });
     }
   });
@@ -198,7 +199,7 @@ function renderFavPage(req, res) {
 
 function addToFavorites(req, res) {
   const sqlString = `INSERT INTO city_fav_data (name,description,housing,cost_of_living,startup,venture_capital,travel_connect, 
-    commute, buisness, safety, healthcare, education, enviroment, economy, taxation, internet_access, culture, tolerance, outdoors,generalScore, image_url) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21) RETURNING id;`;
+    commute, buisness, safety, healthcare, education, enviroment, economy, taxation, internet_access, culture, tolerance, outdoors,general_score, image_url) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21) RETURNING id;`;
   const sqlArray = [
     req.body.name,
     req.body.description,
@@ -219,10 +220,10 @@ function addToFavorites(req, res) {
     req.body.culture,
     req.body.tolerance,
     req.body.outdoors,
-    req.body.generalScore,
+    req.body.general_score,
     req.body.image_url,
   ];
-  // console.log(sqlArray)
+  // console.log(sqlArray);
   client
     .query(sqlString, sqlArray)
     .then(() => {
