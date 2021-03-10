@@ -75,11 +75,10 @@ footer {
   border-style: solid;
   border-width: medium;
   border-radius: 10px;
-  overflow: scroll;
 }
 .job-grid {
   display: grid;
-  height: 500px;
+  height: 700px;
   width: 97%;
   margin: auto;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
