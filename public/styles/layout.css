@@ -1,0 +1,31 @@
+.mission-wrapper {
+  display: grid;
+  height: 250px;
+  width: 600px;
+  border: 5px solid black;
+  margin: auto;
+  
+}
+.city-search {
+  border: 5px solid black;
+  
+  
+}
+.form-potato {
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 25px;
+  margin-top: 15px;
+  
+}
+.top-rated {
+  display: grid;
+  height: 450px;
+  width: 97%;
+  margin: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-around;
+  text-align: center;
+  border: 5px solid black
+}
