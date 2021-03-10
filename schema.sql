@@ -21,6 +21,6 @@ internet_access FLOAT(30),
 culture FLOAT(30),
 tolerance FLOAT(30),
 outdoors FLOAT(30), 
-generalScore FLOAT(30),
+general_score FLOAT(30),
 image_url VARCHAR(255)
 );

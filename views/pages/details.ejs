@@ -31,7 +31,7 @@
             <li>Tolerance: <%= newCity.tolerance %> /10</li>
             <li>Outdoors: <%= newCity.outdoors %> /10</li>
         </ul>
-        <p>Total Score: <%= newCity.generalScore %> /100</p>
+        <p>Total Score: <%= newCity.general_score %> /100</p>
 
         <form action='/favorites' method='POST'>
             <input type='hidden' name='name' value = '<%= newCity.name %>'>
@@ -54,7 +54,7 @@
             <input type='hidden' name='culture' value = '<%= newCity.culture %>'>
             <input type='hidden' name='tolerance' value = '<%= newCity.tolerance %>'>
             <input type='hidden' name='outdoors' value = '<%= newCity.outdoors %>'>
-            <input type='hidden' name='generalScore' value = '<%= newCity.generalScore%> '>
+            <input type='hidden' name='general_score' value = '<%= newCity.general_score %>'>
             <button type='submit' id='save-city'>Add to my Favs</button>
           </form>
           
