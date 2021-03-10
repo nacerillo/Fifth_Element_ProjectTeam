@@ -32,9 +32,13 @@
             <li>Outdoors: <%= newCity.outdoors %> /10</li>
         </ul>
         <p>Total Score: <%= newCity.generalScore %> /100</p>
-        <!-- <p> <%= newCity.description%></p>
-        <p> <%= newCity.housing%></p>
-        <p><%= newCity.cost_of_living%></p> -->
+        
+        <form action="/search/job" method="POST">
+            <input type ='hidden' name='city_name' value="<%= newCity.name %>">
+            <input type="text" name="job_query">
+             <input type="submit">
+      </form>
+  
         
     </div>
 </body>

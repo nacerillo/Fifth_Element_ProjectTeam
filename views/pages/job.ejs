@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <section>
+    <% output.forEach(job => { %>
+      <div>
+        <h3><%= job.title %></h3>
+        <p><%= job.company %></p>
+        <p><%= job.location %></p>
+        <p>Salary range: <%= job.salary_min %> - <%= job.salary_max %></p>
+        <a href =<%= job.job_link %>>
+          <button>Apply Now</button>
+        </a>
+      </div>
+
+    <% }); %>
+  </section>
+</body>
+</html>
