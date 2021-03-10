@@ -12,8 +12,34 @@
           <h3> <%= city.name; %> </h3>
           <img src= <%= city.image_url %>>
           <p> <%= city.description %></p>
+          <form action="/cities/<%=city.id%>" method="GET">
+            <input type='hidden' name='name' value = '<%= city.name %>'>
+            <input type='hidden' name='image_url' value = '<%= city.image_url %>'>
+            <input type='hidden' name='description' value = '<%= city.description %>'>
+            <input type='hidden' name='housing' value = '<%= city.housing %>'>
+            <input type='hidden' name='cost_of_living' value = '<%= city.cost_of_living %>'>
+            <input type='hidden' name='startup' value = '<%= city.startup %>'>
+            <input type='hidden' name='venture_capital' value = '<%= city.venture_capital %>'>
+            <input type='hidden' name='travel_connect' value = '<%= city.travel_connect %>'>
+            <input type='hidden' name='commute' value = '<%= city.commute %>'>
+            <input type='hidden' name='buisness' value = '<%= city.buisness %>'>
+            <input type='hidden' name='safety' value = '<%= city.safety %>'>
+            <input type='hidden' name='healthcare' value = '<%= city.healthcare %>'>
+            <input type='hidden' name='education' value = '<%= city.education %>'>
+            <input type='hidden' name='enviroment' value = '<%= city.enviroment %>'>
+            <input type='hidden' name='economy' value = '<%= city.economy %>'>
+            <input type='hidden' name='taxation' value = '<%= city.taxation %>'>
+            <input type='hidden' name='internet_access' value = '<%= city.internet_access %>'>
+            <input type='hidden' name='culture' value = '<%= city.culture %>'>
+            <input type='hidden' name='tolerance' value = '<%= city.tolerance %>'>
+            <input type='hidden' name='outdoors' value = '<%= city.outdoors %>'>
+            <input type='hidden' name='generalScore' value = '<%= city.generalScore%> '>
+            <button type= "submit"> VEIW DETAILS</button>
+      </form>
         </div>
       <% }); %>
+
+   
     </section>
   </main>
 </body>
