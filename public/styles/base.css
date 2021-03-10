@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  height: 150px;
+  height: 100px;
   width: 1300px;
   margin: 0 auto;
   background-repeat: no-repeat;
@@ -152,11 +152,10 @@ footer {
   border-style: solid;
   border-width: medium;
   border-radius: 10px;
-  overflow: scroll;
 }
 .job-grid {
   display: grid;
-  height: 500px;
+  height: 700px;
   width: 97%;
   margin: auto;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
