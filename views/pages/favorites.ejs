@@ -36,6 +36,9 @@
             <input type='hidden' name='generalScore' value = '<%= city.general_score%> '>
             <button type= "submit"> VEIW DETAILS</button>
       </form>
+      <form action = "/cities/<%=city.id%>?_method=DELETE" method = "post">
+        <button type= "submit"> DELETE FROM FAVES </button>
+    </form>
         </div>
       <% }); %>
 

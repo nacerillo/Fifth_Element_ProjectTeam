@@ -24,6 +24,22 @@ app.post("/search/job", getJob);
 app.get("/favorites", renderFavPage);
 app.post("/favorites", addToFavorites);
 app.get("/cities/:id", getSingleCity);
+app.delete("/cities/:id", deleteCity);
+
+function deleteCity(req, res) {
+  console.log("Entering!");
+  const sqlString = "DELETE FROM city_fav_data WHERE id = $1";
+  const sqlID = [req.params.id];
+  client
+    .query(sqlString, sqlID)
+    .then(res.redirect("/"))
+    .catch((error) => {
+      console.log(error);
+      res
+        .status(500)
+        .send("Looks like there's a problem with deleting the city.");
+    });
+}
 
 function renderHomepage(req, res) {
   res.render("pages/index.ejs");
