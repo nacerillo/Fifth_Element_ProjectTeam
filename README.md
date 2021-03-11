@@ -9,9 +9,10 @@ This is the start of our groups 301 Final Project.
  - clone down the repository `https://github.com/nacerillo/Fifth_Element_ProjectTeam.git`
  - run `npm install` 
  - make sure that the following are also installed: `npm install -S express posgress dotenv`
+ - create two new databases in psql.
  - run the following commands to connect to the DBs: 
-     - `psql -d DB_NAME -f schema.sql`
-     - `psql -d DB_NAME -f fav_city.sql`
+     - `psql -d DB_NAME1 -f schema.sql`
+     - `psql -d DB_NAME2 -f fav_city.sql`
  - run the application using terminal command `nodemon`
 
 ## User Stories
