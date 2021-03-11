@@ -46,9 +46,8 @@ function renderHomepage(req, res) {
 }
 
 function getSingleCity(req, res) {
-  const sqlString = "SELECT * FROM city_data WHERE id = $1";
+  const sqlString = "SELECT * FROM city_fav_data WHERE id = $1";
   const sqlID = [req.params.id];
-
   client
     .query(sqlString, sqlID)
     .then((results) => {
