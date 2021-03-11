@@ -5,6 +5,15 @@ This is the start of our groups 301 Final Project.
 ![WireFrame](Resources/WireFrames_FifthElement.jpg)
 
 
+## Getting Started:
+ - clone down the repository `https://github.com/nacerillo/Fifth_Element_ProjectTeam.git`
+ - run `npm install` 
+ - make sure that the following are also installed: `npm install -S express posgress dotenv`
+ - run the following commands to connect to the DBs: 
+     - `psql -d city_scorer -f schema.sql`
+     - `psql -d city_scorer -f fav_city.sql`
+ - run the application using terminal command `nodemon`
+
 ## User Stories
 
 **Story #1:**
