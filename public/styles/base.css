@@ -13,12 +13,8 @@ nav {
   justify-content: center;
   padding-top: 50px;
 }
-ul {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  background-color: #9caea9;
-}
+
+
 
 header {
   height: 50px;
