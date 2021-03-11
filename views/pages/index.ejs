@@ -1,4 +1,5 @@
 <%- include('../pages/header.ejs') %>
+
     <body>
         <div class="mission-wrapper">
             <div class="mission">
@@ -7,20 +8,23 @@
         <div class='city-search'>
             <div class='city-button'>
                 <form class="form-potato" action="/search/result" method="POST">
-
                     <input type="text" name="city_name">
                     <input type="submit">
-
                 </form>
             </div>
         </div>
         <div class="top-rated">
             <div class="city-1">
-                <img src="Assets/helsinki.jpg" alt="">
+                <p class="title-1">Helsinki, Finland</p>
+                <img class="helsinki" src="/Assets/helsinki.jpg" alt="">
+                <p>Helsinki is the Capital of Finland commonly rated among the top places to 
+                    live in Europe. It's low crime rate, strong social rights and wide range of activities appeal to a large number of people. Maybe this could be your next home!
+                </p>
             </div>
             <div class="city-2"></div>
             <div class="city-3"></div>
             <div class="city-4"></div>
         </div>
     </body>
-</html>
+
+    </html>
