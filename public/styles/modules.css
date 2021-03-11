@@ -1,6 +1,25 @@
 .helsinki {
   height: 200px;
   width: 250px;
+  border-radius: 75px;
+}
+
+.austin {
+  height: 200px;
+  width: 250px;
+  border-radius: 75px;
+}
+
+.kuala-lumpur{
+  height: 200px;
+  width: 250px;
+  border-radius: 75px;
+}
+
+.budapest{
+  height: 200px;
+  width: 250px;
+  border-radius: 75px;
 }
 
 .title-1 {
@@ -8,3 +27,90 @@
   font-size: 24px;
   margin-bottom: 5px;
 }
+
+.title-2 {
+  font-weight: bolder;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+.title-3 {
+  font-weight: bolder;
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+.title-4 {
+  font-weight: bolder;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+.paragraph-4 {
+  width: 260px;
+  padding-left: 27px ;
+  font-weight: bold;
+  
+}
+
+.paragraph-3 {
+  width: 260px;
+  padding-left: 27px ;
+  font-weight: bold;
+}
+
+.paragraph-2 {
+  width: 260px;
+  padding-left: 27px ;
+  font-weight: bold;
+}
+
+.paragraph-1 {
+  width: 260px;
+  padding-left: 27px ;
+  font-weight: bold;
+}
+
+.city-1 {
+  background-image: url(/Assets/blue.jpg);
+    
+}
+
+.city-2 {
+  background-image: url(/Assets/pink.jpg);
+}
+
+.city-3 {
+  background-image: url(/Assets/green.jpg);
+}
+
+.city-4 {
+  background-image: url(/Assets/yellow.jpg);
+}
+
+.p-4container {
+  display: flex;
+  text-align: center;
+  padding-left: 25px;
+  padding-top: 10px;
+  
+}
+
+.p-3container {
+  display: flex;
+  text-align: center;
+  padding-left: 25px;
+  padding-top: 10px;
+}
+
+.p-2container {
+  display: flex;
+  text-align: center;
+  padding-left: 25px;
+  padding-top: 10px;
+}
+
+.p-1container {
+  display: flex;
+  text-align: center;
+  padding-left: 25px;
+  padding-top: 10px;
+}
+

@@ -7,7 +7,7 @@
   
 }
 .city-search {
-  border: 5px solid black;
+  
   
   
 }
@@ -21,13 +21,12 @@
 }
 .top-rated {
   display: grid;
-  height: 450px;
+  height: 550px;
   width: 97%;
   margin: auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: space-around;
   text-align: center;
-  border: 5px solid black
 }
 
 
