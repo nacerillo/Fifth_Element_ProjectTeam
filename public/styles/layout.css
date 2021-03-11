@@ -149,4 +149,40 @@ input[name='submit']{
   transition-timing-function: linear;
 }
 
+@media (max-width: 600px) and (min-width: 400px){
+  .details-div{
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #DADED4;
+  }
+  .scores-list{
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+  }
+
+  .details-div img{
+    width: 320px;
+  }
+
+  .details-div p{
+    width: 300px;
+  }
+
+  #job-search{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  input[name='submit']{
+    margin-left: 50px;
+  }
+
+}
+
 
