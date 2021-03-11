@@ -6,7 +6,7 @@ body {
   background-color: #CCDAD1;
 }
 
-header {
+.jason-header {
   height: 100px;
   width: 1300px;
   margin: 0 auto;
@@ -14,22 +14,20 @@ header {
   background-position: center;
 }
 
-nav {
+/* nav {
   display: flex;
   justify-content: center;
-}
+} */
 
 .jason-page {
   width: 1300px;
-  display: flex;
-  justify-content: space-evenly;
   background-color: #9CAEA9;
 }
 .jason-page:hover{
   background-color: #6F6866;
 }
 .jason-list{
-  display: inline;
+  display: flex;
   justify-content: space-evenly;
   font-size: 24px;
   font-weight: bold;
@@ -53,7 +51,7 @@ h1{
   padding: 40px;
 }
 /* ABOUT US IMAGES */
-.side img {
+.about-us {
   border-radius: 5px;
   width: 400px;
   height: 400px;
