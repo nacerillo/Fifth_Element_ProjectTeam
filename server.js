@@ -1,69 +1,72 @@
-"use strict";
-require("dotenv").config();
+'use strict';
+require('dotenv').config();
 
-const express = require("express");
-const superagent = require("superagent");
-const pg = require("pg");
-const methodOverride = require("method-override");
+const express = require('express');
+const superagent = require('superagent');
+const pg = require('pg');
+const methodOverride = require('method-override');
 const client = new pg.Client(process.env.DATABASE_URL);
 const app = express();
 const PORT = process.env.PORT || 3003;
 const JOB_API = process.env.JOB_API;
 const JOB_ID = process.env.JOB_ID;
 
-client.on("error", (error) => console.log(error));
+client.on('error', (error) => console.log(error));
 
-app.use(methodOverride("_method"));
-app.set("view engine", "ejs");
-app.use(express.static("./public"));
+app.use(methodOverride('_method'));
+app.set('view engine', 'ejs');
+app.use(express.static('./public'));
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", renderHomepage);
-app.post("/search/result", getCity);
-app.post("/search/job", getJob);
-app.get("/favorites", renderFavPage);
-app.post("/favorites", addToFavorites);
-app.get("/cities/:id", getSingleCity);
-app.delete("/cities/:id", deleteCity);
+app.get('/', renderHomepage);
+app.post('/search/result', getCity);
+app.post('/search/job', getJob);
+app.get('/favorites', renderFavPage);
+app.post('/favorites', addToFavorites);
+app.post('/cities/:id', getSingleCity);
+app.delete('/cities/:id', deleteCity);
 
 function deleteCity(req, res) {
-  console.log("Entering!");
-  const sqlString = "DELETE FROM city_fav_data WHERE id = $1";
+  console.log('Entering!');
+  const sqlString = 'DELETE FROM city_fav_data WHERE id = $1';
   const sqlID = [req.params.id];
   client
     .query(sqlString, sqlID)
-    .then(res.redirect("/"))
+    .then(res.redirect('/favorites'))
     .catch((error) => {
       console.log(error);
       res
         .status(500)
-        .send("Looks like there's a problem with deleting the city.");
+        .send('Looks like there\'s a problem with deleting the city.');
     });
 }
 
 function renderHomepage(req, res) {
-  res.render("pages/index.ejs");
+  res.render('pages/index.ejs');
 }
 
 function getSingleCity(req, res) {
-  const sqlString = "SELECT * FROM city_fav_data WHERE id = $1";
+
+  const sqlString = 'SELECT * FROM city_fav_data WHERE id = $1';
+
   const sqlID = [req.params.id];
   client
     .query(sqlString, sqlID)
     .then((results) => {
-      console.log("Start Of Results", results, "FAV-RESULT");
-      const city = results.rows[0];
-      res.render("pages/details.ejs", { newCity: city });
+      console.log('Start Of Results', results, 'FAV-RESULT');
+      const chosenCity = results.rows[0];
+      const ejsObject = {chosenCity};
+      res.render(`pages/scores`, ejsObject);
     })
     .catch((error) => {
       console.log(error);
       res
         .status(500)
-        .send("Looks like there's a problem with getting the city.");
+        .send('Looks like there\'s a problem with getting the city.');
     });
 }
 function getCity(req, res) {
-  const cityname = req.body.city_name.replace(/\s+/g, "-").toLowerCase();
+  const cityname = req.body.city_name.replace(/\s+/g, '-').toLowerCase();
   const checkData = `SELECT * FROM city_data WHERE name = $1`;
   const checkArray = [cityname];
   // console.log(cityname, 'city-name');
@@ -79,7 +82,7 @@ function getCity(req, res) {
           const imageResult = responseArray[1];
           newCity.description = cityResults.body.summary.replace(
             /<[^>]*>/g,
-            ""
+            ''
           );
           newCity.housing = cityResults.body.categories[0].score_out_of_10.toFixed(
             2
@@ -167,17 +170,17 @@ function getCity(req, res) {
             console.log(error);
             res
               .status(500)
-              .send("Looks like there's a problem with adding data.");
+              .send('Looks like there\'s a problem with adding data.');
           });
-          res.render("pages/details.ejs", { newCity: newCity });
+          res.render('pages/details.ejs', { newCity: newCity });
         })
         .catch((error) => {
           console.log(error);
           res.status(500).send(`Sorry something went wrong`);
         });
     } else {
-      console.log("Already Exists", returnedData.rows[0]);
-      res.render("pages/details.ejs", { newCity: returnedData.rows[0] });
+      console.log('Already Exists', returnedData.rows[0]);
+      res.render('pages/details.ejs', { newCity: returnedData.rows[0] });
     }
   });
 }
@@ -190,7 +193,7 @@ function getJob(req, res) {
     .get(url)
     .then((result) => {
       const output = result.body.results.map((job) => new Job(job));
-      res.render("pages/job", { output });
+      res.render('pages/job', { output });
     })
     .catch((error) => {
       console.log(error);
@@ -199,12 +202,12 @@ function getJob(req, res) {
 }
 
 function renderFavPage(req, res) {
-  const sqlString = "SELECT * FROM city_fav_data;";
+  const sqlString = 'SELECT * FROM city_fav_data;';
   client
     .query(sqlString)
     .then((result) => {
       const ejsObject = { allCities: result.rows };
-      res.render("pages/favorites.ejs", ejsObject);
+      res.render('pages/favorites.ejs', ejsObject);
     })
     .catch((error) => {
       console.log(error);
@@ -252,7 +255,7 @@ function addToFavorites(req, res) {
 }
 
 function Job(object) {
-  this.title = object.title.replace(/<[^>]*>/g, "");
+  this.title = object.title.replace(/<[^>]*>/g, '');
   this.company = object.company.display_name;
   this.location = object.location.display_name;
   this.job_link = object.redirect_url;

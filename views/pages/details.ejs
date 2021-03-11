@@ -1,31 +1,31 @@
 
-
+<%- include('../pages/header.ejs') %>
 <body>
     
-    <div>
+    <div class ="details-div">
         <h2><%= newCity.name %> </h2>
         <img src=<%= newCity.image_url %> >
         <p><%= newCity.description %></p>
-        <ul>
-            <li>Housing: <%= newCity.housing %> /10 </li>
-            <li>Cost of Living: <%= newCity.cost_of_living %>/10</li>
-            <li>Startups: <%= newCity.startup %> /10</li>
-            <li>Venture Capital: <%= newCity.venture_capital %> /10</li>
-            <li>Travel Connectivity: <%= newCity.travel_connect %> /10</li>
-            <li>Commute: <%= newCity.commute %> /10</li>
-            <li>Buisness Freedom: <%= newCity.buisness %> /10</li>
-            <li>Safety: <%= newCity.safety %> /10</li>
-            <li>Healthcare: <%= newCity.healthcare %> /10</li>
-            <li>Education: <%= newCity.education %> /10</li>
-            <li>Environmental Quality: <%= newCity.enviroment %> /10</li>
-            <li>Economy: <%= newCity.economy %> /10</li>
-            <li>Taxation: <%= newCity.taxation %></li>
-            <li>Internet Access: <%= newCity.internet_access %> /10</li>
-            <li>Leisure & Culture: <%= newCity.culture %> /10</li>
-            <li>Tolerance: <%= newCity.tolerance %> /10</li>
-            <li>Outdoors: <%= newCity.outdoors %> /10</li>
+        <h3>Total Score: <span class="scores-li"><%= newCity.general_score %></span> /100</h3>
+        <ul class="scores-list">
+            <li>Housing: <span class="scores-li"><%= newCity.housing %></span> /10 </li>
+            <li>Cost of Living: <span class="scores-li"><%= newCity.cost_of_living %></span> /10</li>
+            <li>Startups: <span class="scores-li"><%= newCity.startup %></span> /10</li>
+            <li>Venture Capital: <span class="scores-li"><%= newCity.venture_capital %></span> /10</li>
+            <li>Travel Connectivity: <span class="scores-li"><%= newCity.travel_connect %></span> /10</li>
+            <li>Commute: <span class="scores-li"><%= newCity.commute %></span> /10</li>
+            <li>Buisness Freedom: <span class="scores-li"><%= newCity.buisness %></span> /10</li>
+            <li>Safety: <span class="scores-li"><%= newCity.safety %></span> /10</li>
+            <li>Healthcare: <span class="scores-li"><%= newCity.healthcare %></span> /10</li>
+            <li>Education: <span class="scores-li"><%= newCity.education %></span> /10</li>
+            <li>Environmental Quality: <span class="scores-li"><%= newCity.enviroment %></span> /10</li>
+            <li>Economy: <span class="scores-li"><%= newCity.economy %></span> /10</li>
+            <li>Taxation: <span class="scores-li"><%= newCity.taxation %></span></li>
+            <li>Internet Access: <span class="scores-li"><%= newCity.internet_access %></span> /10</li>
+            <li>Leisure & Culture: <span class="scores-li"><%= newCity.culture %></span> /10</li>
+            <li>Tolerance: <span class="scores-li"><%= newCity.tolerance %></span> /10</li>
+            <li>Outdoors: <span class="scores-li"><%= newCity.outdoors %></span> /10</li>
         </ul>
-        <p>Total Score: <%= newCity.general_score %> /100</p>
 
         <form action='/favorites' method='POST'>
             <input type='hidden' name='name' value = '<%= newCity.name %>'>
@@ -49,17 +49,20 @@
             <input type='hidden' name='tolerance' value = '<%= newCity.tolerance %>'>
             <input type='hidden' name='outdoors' value = '<%= newCity.outdoors %>'>
             <input type='hidden' name='general_score' value = '<%= newCity.general_score %>'>
-            <button type='submit' id='save-city'>Add to my Favs</button>
+            <button type='submit' id='save-city'>Add to my List</button>
           </form>
           
-        
-        <form action='/search/job' method='POST'>
+        <div class="line">
+        </div>
+        <h3>Let's find a new job in <%= newCity.name %></h3>
+        <form id="job-search" action='/search/job' method='POST'>
             <input type ='hidden' name='city_name' value='<%= newCity.name %>'>
-            <input type='text' name='job_query'>
-             <input type='submit'>
+            <input type='text' name='job_query' onfocus="this.value=''" value="Keywords for job search" required>
+             <input type='submit' name='submit'>
       </form>
-  
-        
+      <div class="line">
+    </div>
+
     </div>
 </body>
 </html>
