@@ -19,16 +19,16 @@ nav {
   justify-content: center;
 }
 
-ul{
+.jason-page {
   width: 1300px;
   display: flex;
   justify-content: space-evenly;
   background-color: #9CAEA9;
 }
-ul:hover{
+.jason-page:hover{
   background-color: #6F6866;
 }
-li {
+.jason-list{
   display: inline;
   justify-content: space-evenly;
   font-size: 24px;
@@ -52,7 +52,8 @@ h1{
   font-size: xx-large;
   padding: 40px;
 }
-img {
+/* ABOUT US IMAGES */
+.side img {
   border-radius: 5px;
   width: 400px;
   height: 400px;
