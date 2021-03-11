@@ -1,19 +1,118 @@
+/* ABOUT US */
 body {
   width: 100%;
   margin: 0 auto;
+  background-color: #ccdad1;
+}
+
+header {
+  height: 100px;
+  width: 1300px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 nav {
   display: flex;
   justify-content: center;
-  padding-top: 50px;
 }
 
-/*{
+.jason-page {
+  width: 1300px;
   display: flex;
   justify-content: space-evenly;
   background-color: #9caea9;
-}*/
+}
+.jason-page:hover {
+  background-color: #6f6866;
+}
+.jason-list {
+  display: inline;
+  justify-content: space-evenly;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px;
+  font-family: "Baloo 2", cursive;
+}
+.navigation {
+  text-decoration-color: #38302e;
+}
+
+main {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-family: "Fira Sans", sans-serif;
+  font-size: xx-large;
+  padding: 40px;
+}
+/* ABOUT US IMAGES */
+.side img {
+  border-radius: 5px;
+  width: 400px;
+  height: 400px;
+}
+
+h2 {
+  padding: 10px;
+  font-size: 34px;
+  font-family: "Baloo 2", cursive;
+}
+p {
+  padding: 10px;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+.card-container {
+  height: 400px;
+  width: 400px;
+  margin: 30px;
+  perspective: 600;
+  position: relative;
+  justify-content: center;
+  display: flex;
+}
+.card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+  border-radius: 10px;
+  border: thick #38302e solid;
+  display: flex;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+.card .side {
+  backface-visibility: hidden;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.card .back {
+  transform: rotateY(180deg);
+  background-color: #9caea9;
+}
+.connect {
+  margin-top: 140px;
+  margin-left: 10px;
+}
+.authors-social {
+  height: 30px;
+  width: auto;
+  margin-top: -70px;
+}
 
 header {
   height: 50px;
@@ -39,13 +138,6 @@ footer {
 
 /* JOB SEARCH CSS */
 
-.hero-image {
-  width: 950px;
-  height: 450px;
-  display: block;
-  justify-content: center;
-  margin: auto;
-}
 .show-city {
   text-align: center;
   padding: 20px;
@@ -75,6 +167,14 @@ footer {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-content: space-around;
   text-align: center;
+}
+
+.city-info {
+  width: 25%;
+  height: 25%;
+  display: grid;
+  text-align: center;
+  border: black;
 }
 
 .favorites {
