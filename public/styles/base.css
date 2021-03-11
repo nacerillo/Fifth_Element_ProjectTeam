@@ -2,7 +2,7 @@
 body {
   width: 100%;
   margin: 0 auto;
-  background-color: #CCDAD1;
+  background-color: #ccdad1;
 }
 
 header {
@@ -17,14 +17,14 @@ nav {
   display: flex;
   justify-content: center;
 }
-ul{
+ul {
   width: 1300px;
   display: flex;
   justify-content: space-evenly;
-  background-color: #9CAEA9;
+  background-color: #9caea9;
 }
-ul:hover{
-  background-color: #6F6866;
+ul:hover {
+  background-color: #6f6866;
 }
 li {
   display: inline;
@@ -32,10 +32,10 @@ li {
   font-size: 24px;
   font-weight: bold;
   padding: 10px;
-  font-family: 'Baloo 2', cursive;
+  font-family: "Baloo 2", cursive;
 }
 .navigation {
-  text-decoration-color:  #38302E;
+  text-decoration-color: #38302e;
 }
 
 main {
@@ -43,10 +43,10 @@ main {
   margin: 0 auto;
 }
 
-h1{
+h1 {
   display: flex;
   justify-content: center;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-size: xx-large;
   padding: 40px;
 }
@@ -59,14 +59,14 @@ img {
 h2 {
   padding: 10px;
   font-size: 34px;
-  font-family: 'Baloo 2', cursive
+  font-family: "Baloo 2", cursive;
 }
 p {
   padding: 10px;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Fira Sans", sans-serif;
 }
 
-.center{
+.center {
   display: flex;
   justify-content: center;
 }
@@ -86,7 +86,7 @@ p {
   transition: all 1s ease-in-out;
   width: 100%;
   border-radius: 10px;
-  border: thick #38302E solid;
+  border: thick #38302e solid;
   display: flex;
 }
 .card:hover {
@@ -100,13 +100,13 @@ p {
 }
 .card .back {
   transform: rotateY(180deg);
-  background-color: #9CAEA9;
+  background-color: #9caea9;
 }
 .connect {
   margin-top: 140px;
   margin-left: 10px;
 }
-.authors-social{
+.authors-social {
   height: 30px;
   width: auto;
   margin-top: -70px;
@@ -119,7 +119,7 @@ footer {
   height: 150px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #9CAEA9;
+  background-color: #9caea9;
 }
 
 .footer-social {
@@ -136,7 +136,7 @@ footer {
   justify-content: center;
   margin: auto;
 }
-.show-city{
+.show-city {
   text-align: center;
   padding: 20px;
   height: 50px;
@@ -144,7 +144,11 @@ footer {
 .hero-grid {
   height: 550px;
 }
-.job-description1,.job-description2, .job-description3, .job-description4, .job-description5{
+.job-description1,
+.job-description2,
+.job-description3,
+.job-description4,
+.job-description5 {
   height: 500px;
   margin: 10px;
   padding: 10px;
