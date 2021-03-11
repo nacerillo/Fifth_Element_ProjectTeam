@@ -1,16 +1,16 @@
 
-<!DOCTYPE html>
-<html lang="en">
+
   <%- include('../pages/header.ejs') %>
+ 
 <body>
   <main>
     <section id="container" class = "favorites">
       <% allCities.forEach(city => { %>
         <div class="city-info">
-          <h1> <%= city.name; %> </h1>
-          <img class = favorites src= <%= city.image_url %>>
-          <p class = "favorites"> <%= city.description %></p>
-          <form action="/cities/<%=city.id%>" method="GET">
+          <h2> <%= city.name; %> </h2>
+          <img src= <%= city.image_url %>>
+          <p> <%= city.description %></p>
+          <form action="/cities/<%=city.id%>" method="POST">
             <input type='hidden' name='name' value = '<%= city.name %>'>
             <input type='hidden' name='image_url' value = '<%= city.image_url %>'>
             <input type='hidden' name='description' value = '<%= city.description %>'>

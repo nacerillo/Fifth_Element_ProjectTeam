@@ -23,7 +23,7 @@ app.post("/search/result", getCity);
 app.post("/search/job", getJob);
 app.get("/favorites", renderFavPage);
 app.post("/favorites", addToFavorites);
-app.get("/cities/:id", getSingleCity);
+app.post("/cities/:id", getSingleCity);
 app.delete("/cities/:id", deleteCity);
 
 function deleteCity(req, res) {
@@ -32,7 +32,7 @@ function deleteCity(req, res) {
   const sqlID = [req.params.id];
   client
     .query(sqlString, sqlID)
-    .then(res.redirect("/"))
+    .then(res.redirect("/favorites"))
     .catch((error) => {
       console.log(error);
       res
@@ -52,8 +52,9 @@ function getSingleCity(req, res) {
     .query(sqlString, sqlID)
     .then((results) => {
       console.log("Start Of Results", results, "FAV-RESULT");
-      const city = results.rows[0];
-      res.render("pages/details.ejs", { newCity: city });
+      const chosenCity = results.rows[0];
+      const ejsObject = { chosenCity };
+      res.render(`pages/scores`, ejsObject);
     })
     .catch((error) => {
       console.log(error);

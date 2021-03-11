@@ -1,0 +1,30 @@
+.favorites div {
+  margin: 10px;
+  padding: 10px;
+  background-color: #9caea9;
+  border-color: black;
+  width: 20%;
+  height: 380px;
+  border: solid;
+  border-color: black;
+}
+
+.favorites h2 {
+  margin: 5px;
+  padding: 5px;
+  font-size: 22px;
+  text-transform: capitalize;
+}
+
+.favorites p {
+  height: 75px;
+  margin: 5px;
+  padding: 5px;
+  overflow: scroll;
+  border: dotted;
+  border-color: black;
+}
+
+.favorites img {
+  height: 200px;
+}
