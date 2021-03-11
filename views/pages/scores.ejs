@@ -1,28 +1,29 @@
+<%- include('../pages/header.ejs') %>
 <body>
     
-  <div>
+  <div class ="details-div">
       <h2><%= chosenCity.name %> </h2>
-      <img src=<%= chosenCity.image_url %> >
+      <img class="details-image" src=<%= chosenCity.image_url %> >
       <p><%= chosenCity.description %></p>
-      <ul>
-          <li>Housing: <%= chosenCity.housing %> /10 </li>
-          <li>Cost of Living: <%= chosenCity.cost_of_living %>/10</li>
-          <li>Startups: <%= chosenCity.startup %> /10</li>
-          <li>Venture Capital: <%= chosenCity.venture_capital %> /10</li>
-          <li>Travel Connectivity: <%= chosenCity.travel_connect %> /10</li>
-          <li>Commute: <%= chosenCity.commute %> /10</li>
-          <li>Buisness Freedom: <%= chosenCity.buisness %> /10</li>
-          <li>Safety: <%= chosenCity.safety %> /10</li>
-          <li>Healthcare: <%= chosenCity.healthcare %> /10</li>
-          <li>Education: <%= chosenCity.education %> /10</li>
-          <li>Environmental Quality: <%= chosenCity.enviroment %> /10</li>
-          <li>Economy: <%= chosenCity.economy %> /10</li>
-          <li>Taxation: <%= chosenCity.taxation %></li>
-          <li>Internet Access: <%= chosenCity.internet_access %> /10</li>
-          <li>Leisure & Culture: <%= chosenCity.culture %> /10</li>
-          <li>Tolerance: <%= chosenCity.tolerance %> /10</li>
-          <li>Outdoors: <%= chosenCity.outdoors %> /10</li>
+      <h3>Total Score: <span class="scores-li"><%= chosenCity.general_score %></span> /100</h3>
+      <ul class="scores-list">
+          <li>Housing: <span class="scores-li"><%= chosenCity.housing %></span> /10 </li>
+          <li>Cost of Living: <span class="scores-li"><%= chosenCity.cost_of_living %></span> /10</li>
+          <li>Startups: <span class="scores-li"><%= chosenCity.startup %></span> /10</li>
+          <li>Venture Capital: <span class="scores-li"><%= chosenCity.venture_capital %></span> /10</li>
+          <li>Travel Connectivity: <span class="scores-li"><%= chosenCity.travel_connect %></span> /10</li>
+          <li>Commute: <span class="scores-li"><%= chosenCity.commute %></span> /10</li>
+          <li>Buisness Freedom: <span class="scores-li"><%= chosenCity.buisness %></span> /10</li>
+          <li>Safety: <span class="scores-li"><%= chosenCity.safety %></span> /10</li>
+          <li>Healthcare: <span class="scores-li"><%= chosenCity.healthcare %></span> /10</li>
+          <li>Education: <span class="scores-li"><%= chosenCity.education %></span> /10</li>
+          <li>Environmental Quality: <span class="scores-li"><%= chosenCity.enviroment %></span> /10</li>
+          <li>Economy: <span class="scores-li"><%= chosenCity.economy %></span> /10</li>
+          <li>Taxation: <span class="scores-li"><%= chosenCity.taxation %></span> /10</li>
+          <li>Internet Access: <span class="scores-li"><%= chosenCity.internet_access %></span> /10</li>
+          <li>Leisure & Culture: <span class="scores-li"><%= chosenCity.culture %></span> /10</li>
+          <li>Tolerance: <span class="scores-li"><%= chosenCity.tolerance %></span> /10</li>
+          <li>Outdoors: <span class="scores-li"><%= chosenCity.outdoors %></span> /10</li>
       </ul>
-      <p>Total Score: <%= chosenCity.general_score %> /100</p>
     </div>
 </body>
