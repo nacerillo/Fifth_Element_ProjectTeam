@@ -10,8 +10,8 @@ This is the start of our groups 301 Final Project.
  - run `npm install` 
  - make sure that the following are also installed: `npm install -S express posgress dotenv`
  - run the following commands to connect to the DBs: 
-     - `psql -d city_scorer -f schema.sql`
-     - `psql -d city_scorer -f fav_city.sql`
+     - `psql -d DB_NAME -f schema.sql`
+     - `psql -d DB_NAME -f fav_city.sql`
  - run the application using terminal command `nodemon`
 
 ## User Stories
