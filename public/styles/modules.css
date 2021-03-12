@@ -1,118 +1,234 @@
-.helsinki {
-  height: 200px;
-  width: 250px;
-  border-radius: 75px;
+header, footer {
+  background-color: #3C403D;
 }
 
-.austin {
-  height: 200px;
-  width: 250px;
-  border-radius: 75px;
+#nav_ul {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Baloo 2', cursive;
 }
 
-.kuala-lumpur{
-  height: 200px;
-  width: 250px;
-  border-radius: 75px;
+a{
+  text-decoration: none;
+  color: #f3eded;
 }
 
-.budapest{
-  height: 200px;
-  width: 250px;
-  border-radius: 75px;
+#team{
+  color: #f3eded;
+}
+
+/* INDEX page layout */
+
+input[name='index-button']{
+  font-size: 20px;
+  background-color:  #39603D;
+  box-shadow: 5px 5px 10px rgb(83, 83, 83);
+  color: #f3eded;
+  font-weight: 700;
+}
+
+input[name="city_name"]{
+  background-color: #f3f0f0;
+  border: 3px solid  #496773;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.5)
 }
 
 .title-1 {
   font-weight: bolder;
   font-size: 24px;
-  margin-bottom: 5px;
 }
 
 .title-2 {
   font-weight: bolder;
   font-size: 24px;
-  margin-bottom: 5px;
 }
 .title-3 {
   font-weight: bolder;
   font-size: 21px;
-  margin-bottom: 8px;
 }
 .title-4 {
   font-weight: bolder;
   font-size: 24px;
-  margin-bottom: 5px;
 }
+
 .paragraph-4 {
-  width: 260px;
-  padding-left: 27px ;
   font-weight: bold;
-  
 }
 
 .paragraph-3 {
-  width: 260px;
-  padding-left: 27px ;
   font-weight: bold;
 }
 
 .paragraph-2 {
-  width: 260px;
-  padding-left: 27px ;
   font-weight: bold;
 }
 
 .paragraph-1 {
-  width: 260px;
-  padding-left: 27px ;
   font-weight: bold;
 }
 
 .city-1 {
-  background-image: url(/Assets/blue.jpg);
-    
+  background-image: url(/Assets/blue.jpg);  
 }
-
 .city-2 {
   background-image: url(/Assets/pink.jpg);
 }
-
 .city-3 {
   background-image: url(/Assets/green.jpg);
 }
-
 .city-4 {
   background-image: url(/Assets/yellow.jpg);
 }
 
-.p-4container {
-  display: flex;
+/* ABOUT US PAGE */
+
+h1{
   text-align: center;
-  padding-left: 25px;
-  padding-top: 10px;
-  
+  font-family: 'Fira Sans', sans-serif;
+  font-size: xx-large;
 }
 
-.p-3container {
-  display: flex;
-  text-align: center;
-  padding-left: 25px;
-  padding-top: 10px;
+h2 {
+  font-size: 34px;
+  font-family: 'Baloo 2', cursive;
+}
+p {
+  font-family: 'Fira Sans', sans-serif;
 }
 
-.p-2container {
-  display: flex;
-  text-align: center;
-  padding-left: 25px;
-  padding-top: 10px;
+.card {
+  border: thick #38302E solid;
 }
 
-.p-1container {
-  display: flex;
-  text-align: center;
-  padding-left: 25px;
-  padding-top: 10px;
+.card .back {
+  background-color: #f3eded;
 }
 
+/* JOB SEARCH PAGE */
 
+.job-description {
+  border: 7px double  #39603D;
+  background-color: #f3eded;
+}
 
+.job-description h3 {
+  font-family:'Baloo 2', cursive;
+  font-size: 20px;
+}
+
+.job-description p {
+  font-size: 17px;
+  line-height: 1.3em;
+}
+
+.job-description button{
+  background-color:  #39603D;
+  box-shadow: 5px 5px 10px rgb(83, 83, 83);
+  color: #f3eded;
+  font-weight: 700;
+}
+
+/* FAVORITES PAGE */
+.favorites {
+  background-color: #DADED4;
+}
+
+.favorites div {
+  background-color: #f3eded;
+  border: 7px double  #39603D;
+}
+
+.favorites img {
+  border: 2px solid  #39603D;
+  box-shadow: 2px 2px 5px rgb(83, 83, 83)
+}
+
+.favorites button{
+  background-color:  #39603D;
+  box-shadow: 5px 5px 10px rgb(83, 83, 83);
+  color: #f3eded;
+  font-weight: 700;
+}
+
+/* DETAILS & SCORES PAGES */
+
+.scores-list{
+  border: 7px double  #39603D;
+  background-color:#f3eded;
+  font-size: 18px;
+  font-family:'Fira Sans', sans-serif;
+  font-weight: bold;
+}
+
+.details-div{
+  background-color: #DADED4;
+}
+
+.details-div img{
+  border: 2px solid #3C403D;
+  box-shadow: 5px 5px 10px rgb(83, 83, 83);
+}
+
+.details-div h2{
+  font-size: 45px;
+  text-transform: capitalize;
+  letter-spacing: 0.1em;
+  font-family: 'Baloo 2', cursive;
+  }
+
+.details-div h3{
+  font-size: 22px;
+  border-bottom: 3px solid #3C403D;
+  border-top: 3px solid #3C403D; 
+}
+
+.details-div p{
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.2em;
+  font-family:'Fira Sans', sans-serif;
+  font-weight: bold;
+}
+
+.scores-li{
+  font-size: 20px;
+  color: #39603D;
+  font-family: 'Baloo 2', cursive;
+  font-weight: bold;
+}
+
+#save-city {
+  font-size: 20px;
+  background-color:  #39603D;
+  box-shadow: 5px 5px 10px rgb(83, 83, 83);
+  color: #f3eded;
+  font-weight: 700;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+}
+
+#save-city:hover{
+  background-color: #A3BCB6;
+  color: #3C403D;
+}
+
+.line{
+  background-color: rgba(168, 168, 168, 0.89);
+}
+
+input[name="job_query"]{
+  background-color: #f3f0f0;
+  border: 3px solid  #496773;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.5)
+}
+
+input[name='submit']{
+  font-size: 20px;
+  background-color:  #39603D;
+  box-shadow: 5px 5px 10px rgb(83, 83, 83);
+  color: #f3eded;
+  font-weight: 700;
+}

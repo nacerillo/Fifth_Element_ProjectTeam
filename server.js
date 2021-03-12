@@ -19,6 +19,7 @@ app.use(express.static('./public'));
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', renderHomepage);
+app.get('/about', renderAboutUspage);
 app.post('/search/result', getCity);
 app.post('/search/job', getJob);
 app.get('/favorites', renderFavPage);
@@ -43,6 +44,10 @@ function deleteCity(req, res) {
 
 function renderHomepage(req, res) {
   res.render('pages/index.ejs');
+}
+
+function renderAboutUspage(req, res){
+  res.render('pages/aboutUs.ejs');
 }
 
 function getSingleCity(req, res) {

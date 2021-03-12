@@ -1,6 +1,9 @@
 
-<%- include('../pages/header.ejs') %>
-<body>
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../pages/head.ejs') %>
+ <body>
+   <%- include('../pages/header.ejs') %>
     
     <div class ="details-div">
         <h2><%= newCity.name %> </h2>
@@ -64,5 +67,6 @@
     </div>
 
     </div>
+    <%- include('../pages/footer.ejs') %>  
 </body>
 </html>

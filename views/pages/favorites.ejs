@@ -1,8 +1,9 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../pages/header.ejs') %>
-<body>
+<%- include('../pages/head.ejs') %>
+ <body>
+   <%- include('../pages/header.ejs') %>
   <main>
     <section id="container" class = "favorites">
       <% allCities.forEach(city => { %>
@@ -41,9 +42,8 @@
     </form>
         </div>
       <% }); %>
-
-   
     </section>
   </main>
+  <%- include('../pages/footer.ejs') %> 
 </body>
 </html>
