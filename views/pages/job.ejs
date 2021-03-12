@@ -1,55 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/styles/reset.css" /> 
-    <link rel="stylesheet" href="/public/styles/base.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap" rel="stylesheet">
-    <title>Job Searches</title>
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a class="navigation" href="index.ejs">Searches</a></li>
-        <li><a class="navigation" href="Favorites.ejs">Favorites</a></li>
-        <li><a class="navigation" href="aboutUs.html">About Us</a></li>
-      </ul>
-    </nav>
-  </header>
+ <html lang="en">
+<%- include('../pages/head.ejs') %>
+  <body>
+    <%- include('../pages/header.ejs') %>
   <div class="city-display">
     <h2 class="show-city">Jobs in this city</h2>
   </div>
-  <section>
     <div class="job-grid">
-      <div class="job-description1"> 
         <% output.forEach(job => { %>
-          <div>
-            <h2><%= job.title %></h2>
-            <p><%= job.company %></p>
-            <p><%= job.location %></p>
-            <p>Salary range: <%= job.salary_min %> - <%= job.salary_max %></p>
+          <div class ="job-description">
+            <h3><%= job.title %></h3>
+            <p><%= job.company %><br>
+             <%= job.location %><br>
+             Salary range: <%= job.salary_min %> - <%= job.salary_max %></p>
+
             <a href =<%= job.job_link %>>
-              <button>Apply Now</button>
+              <button class="job-apply">Apply Now</button>
             </a>
           </div>
 
         <% }); %>
-      </div>
-    </div>    
-  </section>
-</body>
-<footer>
-  <div>
-    <img src="/public/Assets/FB.png" class="footer-social">
-    <img src="/public/Assets/GH-round.png" class="footer-social">
-    <img src="/public/Assets/IG.png" class="footer-social">
-    <img src="/public/Assets/LI-round.png" class="footer-social">
-  </div>
-</footer> 
-</html>
+    </div> 
+    <%- include('../pages/footer.ejs') %>   
+  </body>
+ </html>

@@ -1,16 +1,19 @@
-<%- include('../pages/header.ejs') %>
-
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../pages/head.ejs') %>
+  <body>
+    <%- include('../pages/header.ejs') %>
         <div class="mission-wrapper">
             <div class="mission">
+                <img src = "/Assets/logo_final2.png">
             </div>
         </div>
         <div class='city-search'>
             <div class='city-button'>
                 <form class="form-potato" action="/search/result" method="POST">
 
-                    <input type="text" name="city_name" required>
-                    <input type="submit">
+                    <input type="text" name="city_name" required onfocus="this.value=''" value="Type a city name">
+                    <input type="submit" name="index-button">
                 </form>
             </div>
         </div>
@@ -66,7 +69,7 @@
 
             </div>
         </div>
+        <%- include('../pages/footer.ejs') %>
     </body>
-
-<%- include('../pages/footer.ejs') %>
+</html>
 

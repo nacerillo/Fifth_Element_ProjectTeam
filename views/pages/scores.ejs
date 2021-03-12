@@ -1,6 +1,8 @@
-<%- include('../pages/header.ejs') %>
-<body>
-    
+<!DOCTYPE html>
+ <html lang="en">
+<%- include('../pages/head.ejs') %>
+  <body>
+    <%- include('../pages/header.ejs') %>
   <div class ="details-div">
       <h2><%= chosenCity.name %> </h2>
       <img class="details-image" src=<%= chosenCity.image_url %> >
@@ -26,4 +28,6 @@
           <li>Outdoors: <span class="scores-li"><%= chosenCity.outdoors %></span> /10</li>
       </ul>
     </div>
+    <%- include('../pages/footer.ejs') %> 
 </body>
+</html>
